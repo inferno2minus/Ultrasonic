@@ -9,15 +9,15 @@
 
 #include "Ultrasonic.h"
 
-uint32_t previousMillis = 0xFFFF;
+uint32_t previousMillis = 0xFFFFFF9C;
 
 void Ultrasonic::begin(uint8_t trig_pin, uint8_t echo_pin, uint16_t max_dist) {
   _trig_pin = trig_pin;
   _echo_pin = echo_pin;
   _time_out = min(max_dist, 400) * 58;
   _max_dist = min(max_dist, 400);
-  pinMode(trig_pin, OUTPUT);
-  pinMode(echo_pin, INPUT);
+  pinMode(_trig_pin, OUTPUT);
+  pinMode(_echo_pin, INPUT);
 }
 
 uint16_t Ultrasonic::ranging() {
