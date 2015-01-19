@@ -20,7 +20,7 @@ void Ultrasonic::begin(uint8_t trig_pin, uint8_t echo_pin, uint16_t max_dist) {
   pinMode(_echo_pin, INPUT);
 }
 
-uint16_t Ultrasonic::ranging() {
+uint16_t Ultrasonic::ping() {
   uint32_t currentMillis = millis();
 
   if(currentMillis - previousMillis >= 100) {
