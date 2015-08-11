@@ -9,7 +9,7 @@
 
 #include "Ultrasonic.h"
 
-uint32_t previousMillis = 0xFFFFFF9C;
+uint32_t previous_millis = 0xFFFFFF9C;
 
 void Ultrasonic::begin(uint8_t trig_pin, uint8_t echo_pin, uint16_t max_dist) {
   _trig_pin = trig_pin;
@@ -21,10 +21,10 @@ void Ultrasonic::begin(uint8_t trig_pin, uint8_t echo_pin, uint16_t max_dist) {
 }
 
 uint16_t Ultrasonic::ping() {
-  uint32_t currentMillis = millis();
+  uint32_t current_millis = millis();
 
-  if(currentMillis - previousMillis >= 100) {
-    previousMillis = currentMillis;
+  if(current_millis - previous_millis >= 100) {
+    previous_millis = current_millis;
 
     digitalWrite(_trig_pin, HIGH);
     delayMicroseconds(10);
