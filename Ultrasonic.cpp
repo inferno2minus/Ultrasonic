@@ -1,10 +1,8 @@
 /**
- * Project Ultrasonic Sensor Library
+ * Project:     Ultrasonic Library
  * Description: Ultrasonic sensor library for Arduino
- * Version: v1.0
- * Programmer: Kompanets Konstantin (aka I2M)
- *
- * Hardware setup: Ultrasonic sensor module
+ * Version:     v1.0
+ * Author:      Kompanets Konstantin (aka I2M)
  */
 
 #include "Ultrasonic.h"
