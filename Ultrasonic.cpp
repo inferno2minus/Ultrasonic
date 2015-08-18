@@ -21,7 +21,7 @@ void Ultrasonic::begin(uint8_t trig_pin, uint8_t echo_pin, uint16_t max_dist) {
 uint16_t Ultrasonic::ping() {
   uint32_t current_millis = millis();
 
-  if(current_millis - previous_millis >= 100) {
+  if(current_millis - previous_millis >= TIME_DELAY) {
     previous_millis = current_millis;
 
     digitalWrite(_trig_pin, HIGH);

@@ -10,6 +10,8 @@
 
 #include "Arduino.h"
 
+#define TIME_DELAY    100
+
 class Ultrasonic {
 public:
   void begin(uint8_t trig_pin, uint8_t echo_pin, uint16_t max_dist = 400);
