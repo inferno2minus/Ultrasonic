@@ -31,7 +31,7 @@ uint16_t Ultrasonic::ping() {
     _duration = pulseIn(_echo_pin, HIGH, _time_out);
     _distance = _duration / 58;
 
-    if (_distance >= _max_dist || _distance <= 0) {
+    if (_distance > _max_dist || _distance == 0) {
       _distance = _max_dist;
     }
   }
